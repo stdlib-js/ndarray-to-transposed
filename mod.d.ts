@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,16 +16,25 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Return a new ndarray containing the elements of an input ndarray but whose last two dimensions are transposed.
+* Returns a new ndarray containing the elements of an input ndarray but whose last two dimensions are transposed.
 *
-* @module @stdlib/ndarray-to-transposed
+* ## Notes
+*
+* -   The function operates on a stack of matrices, transposing the last two dimensions of the input ndarray.
+* -   The input ndarray must have at least two dimensions.
+*
+* @param x - input array
+* @returns output ndarray
 *
 * @example
 * var array = require( '@stdlib/ndarray-array' );
-* var toTransposed = require( '@stdlib/ndarray-to-transposed' );
 *
 * var x = array( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] );
 * // returns <ndarray>[ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
@@ -33,12 +42,9 @@
 * var y = toTransposed( x );
 * // returns <ndarray>[ [ 1, 4 ], [ 2, 5 ], [ 3, 6 ] ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function toTransposed<T extends ndarray = ndarray>( x: T ): T;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = toTransposed;
