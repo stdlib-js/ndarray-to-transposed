@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-to-transposed
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var toTransposed = require( '@stdlib/ndarray-to-transposed' );
+import toTransposed from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-transposed@deno/mod.js';
 ```
 
 #### toTransposed( x )
@@ -78,7 +60,7 @@ var toTransposed = require( '@stdlib/ndarray-to-transposed' );
 Returns a new [`ndarray`][@stdlib/ndarray/ctor] containing the elements of an input [`ndarray`][@stdlib/ndarray/ctor] but whose last two dimensions are transposed.
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
 
 var x = array( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] );
 // returns <ndarray>[ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
@@ -119,9 +101,9 @@ The function accepts the following arguments:
 <!-- eslint-disable max-len -->
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var toTransposed = require( '@stdlib/ndarray-to-transposed' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+import toTransposed from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-transposed@deno/mod.js';
 
 var x = array( [ [ [ 1, 2, 3 ], [ 4, 5, 6 ] ], [ [ 7, 8, 9 ], [ 10, 11, 12 ] ] ] );
 console.log( ndarray2array( x ) );
@@ -159,7 +141,7 @@ console.log( ndarray2array( y ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -222,7 +204,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-to-transposed/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/deno
 
 <!-- <related-links> -->
 
